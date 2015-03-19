@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="lib/Cesium/Cesium.js"></script>
+    <script src="lib/exif.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="/css/main.css">
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <style>
+        @import url(lib/Cesium/Widgets/widgets.css);
+
+        html, body, #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #loadButton {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            display: inline;
+            margin: 10px;
+            padding: 0px;
+            background: white;
+        }
+
+        /*#buttons {*/
+        /*position: absolute;*/
+        /*top: 0px;*/
+        /*left: 0;*/
+        /*display: inline;*/
+        /*margin: 100px;*/
+        /*padding: 0px;*/
+        /*background: white;*/
+        /*}*/
+
+        #msg {
+            position: absolute;
+            bottom: 0px;
+            display: inline;
+            margin: 5px;
+            padding: 0px;
+            background: white;
+        }
+    </style>
+
+</head>
+<body>
+<div id="cesiumContainer"></div>
+
+<div class="toolbar">
+    <div class="file_upload">
+        <button type="button" class="btn     btn-default">Choose file</button>
+        <input id="loadButton" type="file" multiple>
+    </div>
+
+    <div class="buttons">
+        <div id="buttons" class="span2 btn-group btn-group-md">
+            <button id="start" class="btn btn btn-default glyphicon glyphicon-play-circle myButton"></button>
+            <button id="pause" class="btn btn btn-default glyphicon glyphicon-pause myButton"></button>
+            <button id="stop" class="btn btn btn-default glyphicon glyphicon-stop myButton"></button>
+        </div>
+    </div>
+</div>
+
+<div id="msg">
+    <div>
+        <script src="src/FlyTask.js"></script>
+        <script src="src/main.js"></script>
+</body>
+</html>
